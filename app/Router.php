@@ -46,7 +46,7 @@ class Router
 
                     foreach ($routeUriPart as $key => $part){
                         // Проверка наличия параметра в URI маршрута
-                        if($part === '{part}'){
+                        if($part === '{id}'){
                             $params = $uriParts[$key];
                         }
                         // Сравнение частей URI маршрута с URI запроса
@@ -71,3 +71,5 @@ class Router
         }
     }
 }
+
+
