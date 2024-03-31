@@ -63,7 +63,7 @@ class Router
 
                 if (method_exists($controller, $methodController)) {
                     $controller = new $controller;
-                    call_user_func([$controller, $methodController]);
+                    call_user_func_array([$controller, $methodController], $params);
                     return;
                 }
 
